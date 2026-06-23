@@ -6,7 +6,6 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; }
 
 .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
 
-/* Navbar */
 .navbar {
     position: sticky;
     top: 0;
@@ -34,7 +33,6 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; }
 }
 .nav-links a:hover { color: #ec4899; }
 
-/* ==================== HERO - APENAS FOTO AJUSTADA ==================== */
 .hero {
     background: linear-gradient(135deg, #ec4899 0%, #c026d3 100%);
     min-height: 100vh;
@@ -42,24 +40,20 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; }
     display: flex;
     align-items: center;
 }
-
 .hero-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 60px;
     align-items: center;
 }
-
 @media (min-width: 768px) {
     .hero-grid { grid-template-columns: 1fr 1fr; }
 }
-
 .hero-text {
     display: flex;
     flex-direction: column;
     gap: 28px;
 }
-
 .badge {
     display: inline-flex;
     align-items: center;
@@ -69,7 +63,6 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; }
     border-radius: 9999px;
     font-weight: 600;
 }
-
 .dot {
     width: 10px; height: 10px;
     background: white;
@@ -77,18 +70,15 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; }
     animation: ping 2s infinite;
 }
 @keyframes ping { 75%, 100% { transform: scale(2); opacity: 0; } }
-
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3.9rem;
     line-height: 1.1;
     font-weight: 700;
 }
-
 .highlight { color: #fff; }
 .subtitle { font-size: 1.8rem; font-weight: 300; }
 .description { font-size: 1.28rem; max-width: 520px; opacity: 0.95; }
-
 .btn-primary {
     background: white;
     color: #ec4899;
@@ -100,69 +90,46 @@ h1 {
     align-items: center;
     gap: 10px;
     transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
 }
-
-/* ==================== FOTO COM ANIMAÇÃO ==================== */
 .hero-image-container {
     display: flex;
     justify-content: center;
 }
-
 .hero-image {
     width: 100%;
-    max-width: 460px;           /* Foto maior */
+    max-width: 460px;
     border-radius: 32px;
     border: 16px solid rgba(255, 255, 255, 0.35);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .hero-image:hover {
-    transform: translateY(-15px) rotate(4deg);   /* Animação suave */
+    transform: translateY(-15px) rotate(4deg);
     box-shadow: 0 35px 70px -10px rgba(0, 0, 0, 0.45);
 }
 
-/* ==================== O RESTO FICA EXATAMENTE IGUAL ==================== */
 .about-section { padding: 120px 0; background: white; }
-
 .section-title {
     font-family: 'Playfair Display', serif;
     font-size: 3.2rem;
     font-weight: 700;
     margin-bottom: 32px;
 }
-
 .pink { color: #ec4899; }
-
 .about-description {
     font-size: 1.2rem;
     line-height: 1.8;
     color: #555;
     margin-bottom: 24px;
 }
-
-.highlights {
-    display: flex;
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.highlight-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 1.1rem;
-}
-
-.highlight-item .icon { font-size: 2.8rem; margin-bottom: 12px; }
-
 .about-content-box {
     background: linear-gradient(to bottom right, #fdf4ff, #f3e8ff);
     padding: 50px 40px;
     border-radius: 30px;
+    margin-top: 40px;
 }
-
 .content-title {
     color: #ec4899;
     font-weight: 600;
@@ -171,25 +138,22 @@ h1 {
     margin-bottom: 30px;
     font-size: 1.05rem;
 }
-
 .content-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
 }
-
 @media (min-width: 768px) {
     .content-grid { grid-template-columns: 1fr 1fr; }
 }
-
-.content-item { display: flex; gap: 16px; }
+.content-item { display: flex; gap: 16px; align-items: flex-start; }
 .content-icon { font-size: 2.2rem; flex-shrink: 0; }
 
-/* Redes */
 .redes-section { padding: 100px 0; background: #f8f8f8; }
+.section-header { margin-bottom: 50px; }
 .redes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 30px;
 }
 .rede-card {
@@ -199,6 +163,9 @@ h1 {
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: all 0.4s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 .rede-card:hover { transform: translateY(-12px); }
 .icon { font-size: 4.2rem; margin-bottom: 20px; }
@@ -215,16 +182,92 @@ h1 {
     display: block;
 }
 .label { font-size: 0.9rem; color: #777; }
+.platform { color: #aaa; font-size: 0.95rem; margin-bottom: 8px; }
 
+.feedback-section {
+    padding: 100px 0;
+    background: #fff;
+}
+.section-subtitle {
+    font-size: 1.15rem;
+    color: #666;
+    max-width: 620px;
+    margin: 12px auto 0;
+    text-align: center;
+}
 
-/* Marcas */
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feedback-card {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+.feedback-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(236,72,153,0.18);
+}
+
+.publico-section {
+    padding: 100px 0;
+    background: #f8f8f8;
+}
+.publico-subtitle {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #c026d3;
+    text-align: center;
+    margin-bottom: 6px;
+    font-style: italic;
+}
+.publico-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #000;
+    text-align: left;
+    margin-bottom: 32px;
+}
+.publico-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    margin-top: 60px;
+}
+.publico-card {
+    background: linear-gradient(135deg, #ec4899 0%, #c026d3 100%);
+    border-radius: 24px 24px 60px 60px;
+    padding: 52px 36px 64px;
+    color: white;
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    box-shadow: 0 12px 35px rgba(236,72,153,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.publico-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 50px rgba(236,72,153,0.4);
+}
+
+.marcas-section { padding: 100px 0; background: white; }
 .marcas-scroll {
     display: flex;
     gap: 35px;
     overflow-x: auto;
     padding: 30px 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #ec4899 #f0f0f0;
 }
-
+.marcas-scroll::-webkit-scrollbar { height: 6px; }
+.marcas-scroll::-webkit-scrollbar-track { background: #f0f0f0; border-radius: 10px; }
+.marcas-scroll::-webkit-scrollbar-thumb { background: #ec4899; border-radius: 10px; }
 .marca-logo {
     width: 115px;
     height: 115px;
@@ -237,15 +280,17 @@ h1 {
     transition: all 0.4s ease;
     flex-shrink: 0;
 }
-
 .marca-logo:hover {
     transform: scale(1.12) rotate(6deg);
     border-color: #ec4899;
 }
+.footer-text {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+    font-style: italic;
+}
 
-.redes-section { padding: 100px 0; background: #f8f8f8; }
-
-/* Colaboração */
 .colaboracao-section {
     padding: 120px 0;
     background: linear-gradient(135deg, #fdf4ff, #fae8ff);
@@ -259,7 +304,11 @@ h1 {
     text-align: center;
     box-shadow: 0 20px 50px rgba(236,72,153,0.15);
 }
-.colaboracao-box h2 { font-size: 2.9rem; margin-bottom: 20px; }
+.colaboracao-box h2 { 
+    font-family: 'Playfair Display', serif;
+    font-size: 2.9rem; 
+    margin-bottom: 20px; 
+}
 .colaboracao-text { font-size: 1.25rem; color: #555; margin-bottom: 40px; }
 .contato-info {
     display: flex;
@@ -267,12 +316,7 @@ h1 {
     justify-content: center;
     flex-wrap: wrap;
 }
-.footer-text {
-    text-align: center;
-    margin-top: 40px;
-    color: #777;
-    font-style: italic;
-}
+.click-info { margin-top: 16px; font-size: 0.9rem; color: #aaa; }
 
 footer {
     padding: 40px 0;
@@ -281,8 +325,15 @@ footer {
     color: #aaa;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
-    .heading, .section-title { font-size: 2.8rem; }
-    .marca-logo { width: 95px; height: 95px; }
+    h1 { font-size: 2.8rem; }
+    .section-title { font-size: 2.4rem; }
+    .publico-title { font-size: 2.2rem; }
+    .marca-logo { width: 90px; height: 90px; }
+    .colaboracao-box { padding: 50px 28px; }
+    .feedback-grid { grid-template-columns: 1fr 1fr; }
+    .publico-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+    .feedback-grid { grid-template-columns: 1fr; }
 }
